@@ -8,9 +8,9 @@ const  Navbar = () => {
   
     return ( 
       <div class="topnav">
-        <NavLink to="/Home">Home</NavLink>
-        <NavLink to="/About">About</NavLink>
-        <NavLink to="/Contact">Contact</NavLink>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
         </div>
     )
   }
