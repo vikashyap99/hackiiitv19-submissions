@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
+  background-image: url('https://static.imoney.my/articles/wp-content/uploads/2019/07/stethoscope.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
 .App-header {
