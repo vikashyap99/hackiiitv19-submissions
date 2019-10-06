@@ -7,7 +7,7 @@ import './Navbar.css';
 const  Navbar = () => {
   
     return ( 
-      <div class="topnav">
+      <div className="topnav">
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/contact">Contact</NavLink>

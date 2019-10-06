@@ -1,40 +1,30 @@
 import React,{ Component} from 'react';
+import axios from 'axios';
 
 class NameForm extends Component {
     
-    constructor(props){
-        super(props);
-    this.state = {
-        
-        doctername: " ",
-        patientname: " ",
-        symptoms: " ",
-        prescription: " "
-    }
-
-    }
-
-  
-    handleChangedocter = (event) => {
-        
-      this.setState({doctername: event.target.value});
-    }
-
-    handleChangepatient= (event)  => {
-        this.setState({patientname: event.target.value});
-      }
-    handleChangeprescreption = (event) => {
-        this.setState({prescription: event.target.value});
-      }
-    handleChangesymptoms = (event)=> {
-        this.setState({symptoms: event.target.value});
-      }
-
   
       handleSubmit = (event)  => {
-        //alert('A name was submitted: ' + this.state.value);
+        
         event.preventDefault();
-        console.log(this.state);
+        let x1 = document.getElementById("a1").value;
+        let x2 = document.getElementById("a2").value;
+        let x3 = document.getElementById("a3").value;
+        let x4 = document.getElementById("a4").value;
+        
+        
+        const data = {
+          doctername: x1,
+          patientname: x2,
+          prescription: x3,
+          symptoms: x4
+        }
+        axios.post(`https://genesis-forger.firebaseio.com/medical.json/`,data)
+        .then(res=>{
+          console.log(res);
+          console.log(data);
+        });
+        
       }
   
     render() {
@@ -42,19 +32,19 @@ class NameForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Docter Name:
-            <input type="text" value={this.state.value} onChange={this.handleChangedocter} />
+            <input type="text" id="a1"  />
           </label>
           <label>
             Paitent Name:
-            <input type="text" value={this.state.value} onChange={this.handleChangepatient} />
+            <input type="text" id="a2"   />
           </label>
           <label>
           Symptoms:
-          <textarea value={this.state.value} onChange={this.handleChangesymptoms} />
+          <textarea  id="a3"  />
         </label>
         <label>
           Prescription:
-          <textarea value={this.state.value} onChange={this.handleChangeprescreption} />
+          <textarea  id="a4" />
         </label>
           <input type="submit" value="Submit" />
         </form>
