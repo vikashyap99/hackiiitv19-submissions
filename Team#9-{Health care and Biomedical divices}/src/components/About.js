@@ -6,7 +6,7 @@ const about = () => {
         
            <div >
                <h1>Welcome</h1>
-              <p id="a">At xyz,we believe in digital future of healthcare in India.
+              <p id="a">At Med_di_dat,we believe in digital future of healthcare in India.
               We believein a future in which no one will have to carry their medical records.
               Every medical record from medical reports to doctor's prescription will be digitalized.
               </p>
